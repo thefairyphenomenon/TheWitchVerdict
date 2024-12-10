@@ -1,0 +1,242 @@
+/* General styling */
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-family: 'Lora', serif;
+}
+
+p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-family: 'Lora', serif;
+}
+
+/* Flower container in the right corner */
+.flowers-container {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Flower petals */
+.flower-petal {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background-color: #FFB6C1;
+    border-radius: 50%;
+    opacity: 0;
+    transform-origin: center;
+    animation: bloom 3s ease-in-out infinite;
+}
+
+/* Position petals with decreasing size towards bottom center */
+.flower-petal:nth-child(1) {
+    transform: rotate(0deg) translateX(80px) scale(1.2);
+    animation-delay: 0s;
+}
+.flower-petal:nth-child(2) {
+    transform: rotate(60deg) translateX(80px) scale(1.1);
+    animation-delay: 0.2s;
+}
+.flower-petal:nth-child(3) {
+    transform: rotate(120deg) translateX(80px) scale(1);
+    animation-delay: 0.4s;
+}
+.flower-petal:nth-child(4) {
+    transform: rotate(180deg) translateX(80px) scale(0.9);
+    animation-delay: 0.6s;
+}
+.flower-petal:nth-child(5) {
+    transform: rotate(240deg) translateX(80px) scale(0.8);
+    animation-delay: 0.8s;
+}
+.flower-petal:nth-child(6) {
+    transform: rotate(300deg) translateX(80px) scale(0.7);
+    animation-delay: 1s;
+}
+
+/* Blooming Animation */
+@keyframes bloom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* About Page Styles */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+section h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+section p, ul {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Languages Section */
+.languages {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.languages h2 {
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Globe Container */
+.globe-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    perspective: 1000px;
+}
+
+/* Globe */
+.globe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffecd2, #fcb69f);
+    animation: rotate 10s linear infinite;
+    transform-style: preserve-3d;
+}
+
+/* Language Texts */
+.lang {
+    position: absolute;
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: #333;
+    transform: rotateY(var(--angle)) translateZ(100px);
+}
+
+/* Rotation Animation */
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/* Social Media Section */
+.social-media {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+}
+
+.social-media h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    color: #555;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #ff6347;
+    color: #fff;
+}
+
+/* Blog Page Styles */
+.blog {
+    padding: 20px;
+}
+
+.blog article {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fefefe;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blog article h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog article p {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
