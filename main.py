@@ -12,7 +12,7 @@ def about():
 
 @app.route('/blog')
 def blog():
-    return render_template('blog.html')
+    return render_template('blog.html', posts=BLOG_POSTS)
 
 if __name__ == "__main__":
     app.run(debug=True)  # Run the app in debug mode
@@ -30,9 +30,5 @@ BLOG_POSTS = [
     },
     
 ]
-
-@app.route('/blog')
-def blog():
-    return render_template('blog.html', posts=BLOG_POSTS)
 
  
