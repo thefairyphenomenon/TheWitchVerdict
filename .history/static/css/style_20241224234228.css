@@ -118,14 +118,5 @@ flower-container {
     bottom: 10px;
     width: 100%;
     text-align: center;
-}
-
-/* Blooming animation */
-@keyframes bloom {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-}
+  }
+  
