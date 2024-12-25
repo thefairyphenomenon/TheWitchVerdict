@@ -18,7 +18,7 @@
     height: 100%;
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(circle, #280266, #16770d);
+    background: radial-gradient(circle, #ffecd2, #fcb69f);
     animation: rotate 10s linear infinite;
     transform-style: preserve-3d;
 }
