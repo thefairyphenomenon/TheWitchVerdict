@@ -489,7 +489,7 @@ export default function Certifications() {
               className="flex gap-3 mt-2">
               <button onClick={unlockAll}
                 className="flex-1 font-mono text-xs tracking-widest py-2.5 rounded-xl border border-witch-violet/30 text-witch-violet hover:bg-witch-violet/10 transition-all">
-                Unlock All ✦
+                Mark All Complete ✦
               </button>
               <button onClick={resetAll}
                 className="flex-1 font-mono text-xs tracking-widest py-2.5 rounded-xl border border-witch-silver/20 text-witch-silver/40 hover:text-witch-silver/70 transition-all">

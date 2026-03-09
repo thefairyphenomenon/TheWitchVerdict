@@ -3,9 +3,9 @@ import { createContext, useContext, useState, useCallback, ReactNode } from "rea
 import { Language, translations, TranslationKey } from "@/data/translations";
 
 interface LangContextType {
-  lang:    Language;
-  t:       (key: TranslationKey) => string;
-  setLang: (lang: Language) => void;
+  lang:   Language;
+  t:      (key: TranslationKey) => string;
+  setLang:(lang: Language) => void;
 }
 
 const LangContext = createContext<LangContextType>({

@@ -175,9 +175,9 @@ export default function Skills() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="font-mono text-xs tracking-[0.3em] text-witch-violet mb-3 uppercase">✦ The Constellation</div>
+          <div className="font-mono text-xs tracking-[0.3em] text-witch-violet mb-3 uppercase">✦ Skills</div>
           <h2 className="section-title shimmer-text">Skills</h2>
-          <p className="font-dm italic text-witch-silver/60 mt-3">Hover the stars to explore — each cluster a domain</p>
+          <p className="font-dm italic text-witch-silver/60 mt-3">Hover to explore — each cluster is a domain</p>
         </motion.div>
 
         <motion.div

@@ -39,10 +39,10 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="font-mono text-xs tracking-[0.3em] text-witch-violet mb-3 uppercase">✦ Summon</div>
-          <h2 className="section-title shimmer-text">Send a Raven</h2>
+          <div className="font-mono text-xs tracking-[0.3em] text-witch-violet mb-3 uppercase">✦ Contact</div>
+          <h2 className="section-title shimmer-text">Get in Touch</h2>
           <p className="font-dm italic text-witch-silver/60 mt-3 max-w-md mx-auto">
-            Whether you have a project in mind, an opportunity to share, or simply want to connect — I am listening.
+            Whether you have a project, an opportunity, or just want to connect — I'd love to hear from you.
           </p>
         </motion.div>
 
@@ -62,14 +62,14 @@ export default function Contact() {
                 className="witch-card p-8 text-center flex flex-col gap-4 glow-violet"
               >
                 <div className="text-5xl">🪄</div>
-                <p className="font-cinzel text-witch-violet text-lg">Raven Dispatched</p>
-                <p className="font-dm italic text-witch-silver/60 text-sm">Your message has been sent. Expect a reply soon.</p>
+                <p className="font-cinzel text-witch-violet text-lg">Message Sent</p>
+                <p className="font-dm italic text-witch-silver/60 text-sm">Thanks for reaching out. I will be in touch soon.</p>
               </motion.div>
             ) : (
               <>
                 {[
                   { name: "name",    label: "Your Name",    type: "text",  placeholder: "Introduce yourself..." },
-                  { name: "email",   label: "Your Email",   type: "email", placeholder: "Where shall I write back?" },
+                  { name: "email",   label: "Your Email",   type: "email", placeholder: "Where should I reply?" },
                 ].map(field => (
                   <div key={field.name}>
                     <label className="font-mono text-xs tracking-widest text-witch-silver/50 block mb-2 uppercase">
@@ -90,7 +90,7 @@ export default function Contact() {
                   </label>
                   <textarea
                     rows={5}
-                    placeholder="Speak your intentions..."
+                    placeholder="What is on your mind?"
                     value={form.message}
                     onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
                     className="w-full bg-witch-deep border border-witch-violet/20 rounded-xl px-4 py-3 font-dm text-witch-mist text-sm focus:outline-none focus:border-witch-violet/60 transition-colors placeholder:text-witch-silver/20 resize-none"
@@ -160,7 +160,7 @@ export default function Contact() {
         className="absolute bottom-6 left-0 right-0 text-center"
       >
         <p className="font-mono text-xs text-witch-silver/20 tracking-widest">
-          ✦ &nbsp; The Witch Verdict &nbsp; · &nbsp; Richa Sharma &nbsp; · &nbsp; {new Date().getFullYear()} &nbsp; ✦
+          ✦ &nbsp; Richa Sharma &nbsp; · &nbsp; Financial Engineer &amp; AI Builder &nbsp; · &nbsp; {new Date().getFullYear()} &nbsp; ✦
         </p>
       </motion.div>
     </section>

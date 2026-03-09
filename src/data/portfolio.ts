@@ -46,9 +46,9 @@ export const experience = [
     role: "Technical Project Manager Intern",
     company: "Web3Task Pvt Ltd",
     location: "Noida, NCR",
-    period: "June 2025 – Present",
+    period: "June 2025 – Jan 2026",
     color: "#BF5FFF",
-    level: "ACTIVE QUEST",
+    level: "COMPLETED",
     xp: 2400,
     highlights: [
       "Secured startup credits & cloud infra from Google, Microsoft & Vultr — enabled multi-app deployment",
@@ -183,10 +183,11 @@ export const languages = [
 ];
 
 export const navItems = [
-  { label: "About",    href: "#about"    },
-  { label: "Education", href: "#education" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects",  href: "#projects"  },
-  { label: "Skills",    href: "#skills"    },
-  { label: "Contact",   href: "#contact"   },
+  { label: "About",          href: "#about"          },
+  { label: "Education",      href: "#education"      },
+  { label: "Experience",     href: "#experience"     },
+  { label: "Certifications", href: "#certifications" },
+  { label: "Projects",       href: "#projects"       },
+  { label: "Skills",         href: "#skills"         },
+  { label: "Contact",        href: "#contact"        },
 ];

@@ -39,9 +39,9 @@ export default function Projects() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="font-mono text-xs tracking-[0.3em] text-witch-violet mb-3 uppercase">✦ Spells Cast</div>
+          <div className="font-mono text-xs tracking-[0.3em] text-witch-violet mb-3 uppercase">✦ Projects</div>
           <h2 className="section-title shimmer-text">Projects</h2>
-          <p className="font-dm italic text-witch-silver/60 mt-3">Each system — a different kind of sorcery</p>
+          <p className="font-dm italic text-witch-silver/60 mt-3">Each system built to solve a real problem</p>
         </motion.div>
 
         {/* Project tabs */}

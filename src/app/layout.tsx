@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
-  title:       "Richa Sharma — The Witch Verdict",
+  title:       "Richa Sharma — Financial Engineer & AI Builder",
   description: "Financial Engineer & AI Builder. I design projects to help people understand finance and technology better, and push the limits of AI with mathematical brute force.",
   keywords:    ["Financial Engineering", "AI", "Quant Finance", "Machine Learning", "Python", "Portfolio"],
   authors:     [{ name: "Richa Sharma" }],
   openGraph: {
-    title:       "Richa Sharma — The Witch Verdict",
+    title:       "Richa Sharma — Financial Engineer & AI Builder",
     description: "Financial Engineer & AI Builder",
     type:        "website",
   },

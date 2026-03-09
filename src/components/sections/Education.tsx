@@ -372,8 +372,8 @@ export default function Education() {
   };
 
   const bubbles = [
-    "MSc in\nfinancial\nmagic! ✦",
-    "Coding\nspells\nin CS! 💻",
+    "MSc\nFinancial\nEngineering!",
+    "Coding\nin\nCS! 💻",
     "CGPA:\n8.0 ⭐",
   ];
 
@@ -386,10 +386,10 @@ export default function Education() {
         {/* Header */}
         <motion.div initial={{ opacity:0, y:40 }} animate={inView?{opacity:1,y:0}:{}}
           transition={{ duration:0.8 }} className="text-center mb-12">
-          <div className="font-mono text-xs tracking-[0.3em] text-witch-violet mb-3 uppercase">✦ The Grimoire</div>
+          <div className="font-mono text-xs tracking-[0.3em] text-witch-violet mb-3 uppercase">✦ Education</div>
           <h2 className="section-title shimmer-text">Education</h2>
           <p className="font-dm italic text-witch-silver/50 mt-2 text-sm">
-            Select a chapter · Click the card to reveal spell details
+            Select a degree · Click the card for details
           </p>
         </motion.div>
 
@@ -442,7 +442,7 @@ export default function Education() {
                   <p className="font-dm italic text-witch-silver/60 text-sm">{edu.institution}</p>
                   <div className="font-mono text-xs tracking-widest" style={{ color:colors[active] }}>{edu.period}</div>
                   <motion.p animate={{ opacity:[0.3,1,0.3] }} transition={{ repeat:Infinity, duration:2 }}
-                    className="font-mono text-xs text-witch-silver/40 mt-1">tap to reveal ✦</motion.p>
+                    className="font-mono text-xs text-witch-silver/40 mt-1">click to expand ✦</motion.p>
                   <div className="absolute inset-0 rounded-2xl pointer-events-none"
                     style={{ boxShadow:`inset 0 0 40px ${colors[active]}08` }} />
                 </div>
@@ -450,7 +450,7 @@ export default function Education() {
                 <div className="absolute inset-0 rounded-2xl overflow-hidden flex flex-col justify-center gap-4 p-6"
                   style={{ backfaceVisibility:"hidden", transform:"rotateY(180deg)", background:`radial-gradient(ellipse at top,${colors[active]}22,#06040E)`, border:`1px solid ${colors[active]}55` }}>
                   <div className="font-mono text-xs tracking-widest uppercase" style={{ color:colors[active] }}>
-                    ✦ Chapter Details
+                    ✦ Details
                   </div>
                   <p className="font-dm text-witch-silver/80 text-sm leading-relaxed">{edu.description}</p>
                   <div className="mt-auto border-t border-witch-violet/20 pt-4">

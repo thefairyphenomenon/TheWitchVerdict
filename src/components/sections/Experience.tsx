@@ -352,10 +352,10 @@ export default function Experience() {
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: 40 }} animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }} className="text-center mb-12">
-          <div className="font-mono text-xs tracking-[0.3em] text-witch-violet mb-3 uppercase">✦ Quest Log</div>
+          <div className="font-mono text-xs tracking-[0.3em] text-witch-violet mb-3 uppercase">✦ Experience</div>
           <h2 className="section-title shimmer-text">Experience</h2>
           <p className="font-dm italic text-witch-silver/50 mt-2 text-sm">
-            Click a destination to travel there
+            Select a role to explore
           </p>
         </motion.div>
 
@@ -373,7 +373,7 @@ export default function Experience() {
           </div>
         </motion.div>
 
-        {/* Quest selector tabs */}
+        {/* Role selector tabs */}
         <div className="flex justify-center gap-4 mb-8">
           {experience.map((e, i) => (
             <motion.button key={i} onClick={() => setActive(i)}
@@ -393,7 +393,7 @@ export default function Experience() {
           ))}
         </div>
 
-        {/* Quest details panel */}
+        {/* Role details panel */}
         <AnimatePresence mode="wait">
           <motion.div key={active}
             initial={{ opacity: 0, y: 24 }}
@@ -414,11 +414,7 @@ export default function Experience() {
                 </motion.div>
                 {/* Status dot */}
                 <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full border-2 border-witch-void"
-                  style={{ background: exp.level === "ACTIVE QUEST" ? "#7FFF00" : "#C9956C", boxShadow: `0 0 8px ${exp.color}` }}>
-                  {exp.level === "ACTIVE QUEST" && (
-                    <motion.div animate={{ scale: [1, 1.8, 1], opacity: [1, 0, 1] }} transition={{ repeat: Infinity, duration: 2 }}
-                      className="absolute inset-0 rounded-full" style={{ background: "#7FFF00" }} />
-                  )}
+                  style={{ background: "#C9956C", boxShadow: `0 0 8px ${exp.color}` }}>
                 </div>
               </div>
 
@@ -438,7 +434,7 @@ export default function Experience() {
             {/* Middle — mission objectives */}
             <div className="flex flex-col gap-4">
               <p className="font-mono text-xs tracking-widest text-witch-silver/40 uppercase">
-                Mission Objectives
+                Key Contributions
               </p>
               <ul className="flex flex-col gap-3">
                 {exp.highlights.map((h, i) => (
@@ -459,7 +455,7 @@ export default function Experience() {
             {/* Right — skill tree */}
             <div className="flex flex-col gap-4">
               <p className="font-mono text-xs tracking-widest text-witch-silver/40 uppercase">
-                Skills Unlocked
+                Skills Applied
               </p>
               <div className="flex flex-col gap-2">
                 {exp.skills.map((s, i) => (
@@ -472,7 +468,7 @@ export default function Experience() {
                 style={{ background: exp.color + "10", border: `1px solid ${exp.color}30` }}>
                 <div className="font-mono text-xs text-witch-silver/40 mb-1">Achievement</div>
                 <div className="font-dm italic text-sm" style={{ color: exp.color }}>
-                  {active === 0 ? "📊 Financial Architect" : "🏆 50K Users Shipped"}
+                  {active === 0 ? "🏆 50K Users Shipped" : "📊 Financial Architect"}
                 </div>
               </motion.div>
             </div>

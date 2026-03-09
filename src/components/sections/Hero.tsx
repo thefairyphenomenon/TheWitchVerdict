@@ -188,7 +188,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="font-mono text-xs tracking-[0.4em] text-witch-silver uppercase mb-2"
         >
-          ✦ &nbsp; The Witch Verdict &nbsp; ✦
+          ✦ &nbsp; Financial Engineer · AI Builder &nbsp; ✦
         </motion.div>
 
         <ParticleName name={personal.name} />
@@ -217,7 +217,7 @@ export default function Hero() {
             onClick={scrollToAbout}
             className="gradient-border px-8 py-3 font-mono text-xs tracking-widest text-witch-violet hover:text-white transition-colors duration-300"
           >
-            Enter the Realm
+            View My Work
           </button>
           <a
             href={personal.github}

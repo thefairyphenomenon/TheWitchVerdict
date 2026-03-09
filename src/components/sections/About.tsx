@@ -69,8 +69,8 @@ export default function About() {
               ✦ About
             </div>
             <h2 className="section-title text-witch-mist mb-6">
-              The Witch<br />
-              <span className="text-witch-violet">Behind the</span> Code
+              The Mind<br />
+              <span className="text-witch-violet">Behind the</span> Work
             </h2>
             <p className="font-dm text-witch-silver/80 text-lg leading-relaxed">
               {personal.bio}
