@@ -20,7 +20,6 @@ const LangContext = createContext<LangContextType>({
 
 export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Language>("en");
-  const [isFlipping, setIsFlipping] = useState(false);
 
   const t = useCallback(
     (key: TranslationKey) => translations[lang][key] as string,
@@ -30,7 +29,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
   const setLang = useCallback((l: Language) => setLangState(l), []);
 
   return (
-    <LangContext.Provider value={{ lang, t, setLang, isFlipping, setIsFlipping }}>
+    <LangContext.Provider value={{ lang, t, setLang }}>
       {children}
     </LangContext.Provider>
   );
