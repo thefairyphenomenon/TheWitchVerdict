@@ -1,7 +1,8 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { motion } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
+import { useEffect } from "react";
 import { LangProvider, useLang } from "@/hooks/useLang";
 
 const Cursor = dynamic(() => import("@/components/ui/Cursor"), { ssr: false });
@@ -15,26 +16,44 @@ const Skills = dynamic(() => import("@/components/sections/Skills"), { ssr: fals
 const Contact = dynamic(() => import("@/components/sections/Contact"), { ssr: false });
 
 function AppShell() {
-  const { isFlipping } = useLang();
+  const { flipToken } = useLang();
+  const controls = useAnimationControls();
+
+  useEffect(() => {
+    if (!flipToken) return;
+    controls.start({
+      rotateY: [0, -92, 0],
+      opacity: [1, 0.5, 1],
+      scale: [1, 0.985, 1],
+      transition: { duration: 0.9, ease: "easeInOut", times: [0, 0.48, 1] },
+    });
+  }, [flipToken, controls]);
 
   return (
-    <motion.div
-      animate={isFlipping ? { rotateY: [0, -90, 0], opacity: [1, 0.55, 1] } : { rotateY: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: "easeInOut" }}
-      style={{ transformStyle: "preserve-3d", transformOrigin: "center center", perspective: 1800 }}
-    >
-      <Cursor />
-      <Nav />
-      <main>
-        <Hero />
-        <About />
-        <Education />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Contact />
-      </main>
-    </motion.div>
+    <div style={{ perspective: 2600 }}>
+      <motion.div
+        animate={controls}
+        initial={{ rotateY: 0, opacity: 1, scale: 1 }}
+        style={{
+          transformStyle: "preserve-3d",
+          transformOrigin: "left center",
+          willChange: "transform, opacity",
+          backfaceVisibility: "hidden",
+        }}
+      >
+        <Cursor />
+        <Nav />
+        <main>
+          <Hero />
+          <About />
+          <Education />
+          <Experience />
+          <Projects />
+          <Skills />
+          <Contact />
+        </main>
+      </motion.div>
+    </div>
   );
 }
 
